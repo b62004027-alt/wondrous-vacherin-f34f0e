@@ -1,0 +1,35 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --color-ink: #0c2a20;
+  --color-forest: #0b5d3b;
+  --color-forest-dark: #07402a;
+  --color-cream: #f7f2e6;
+  --color-paper: #fffdf7;
+  --color-sun: #f5c43b;
+  --color-clay: #d9643a;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-paper {
+  background-image:
+    linear-gradient(to right, rgb(12 42 32 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(12 42 32 / 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
